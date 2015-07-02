@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pseudo Equal Height Columns</title>
+
+<meta charset="utf-8">
+<meta name="description" content="" />
+
+<link rel="stylesheet" href="style.css">
+
+<style type="text/css">
+/* --------- demo presentation------------ */
+body {font: normal 16px/1.5em helvetica, arial, sans-serif; margin:0; width:100%;}
+#header, #footer {height:50px; padding:5px; color:#fff; background: #777}
+#content, #sidebar {padding: 10px 0;}
+#sidebar {color:#fff}
+#content p, #sidebar p {max-width: 75%}
+h2 {font-size: 16px}
+pre {}
+/* --------------------------------------- */
+
+
+#container {
+	overflow: hidden;
+	background: #555;
+}
+
+
+/* ----------- arrange columns ------------- */
+#content {
+	float:left;
+	width:65%;
+	padding-left: 10%;
+	background:#eee;
+}
+
+#sidebar {
+	float:left;
+	width:20%;
+	padding-left: 5%;
+	background:#555;
+}
+/* --------------------------------------- */
+
+
+
+/* --------------------------------------- */
+#footer {
+	clear:both;
+}
+/* --------------------------------------- */
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="sidebar">
+		<h2>Sidebar</h2>
+		<pre>#container {
+  overflow: hidden;
+  background: #555;
+}
+
+#sidebar {
+  float:left;
+  width:25%;
+  background:#555
+}
+		</pre>
+	</div>
+
+	<div id="content">
+		<h2>Main content</h2>
+		<pre>
+#content {
+  float:left;
+  width:75%;
+  background:#eee;
+}
+		</pre>
+		
+		<p>The key to this layout is knowing which of the 2 columns will be shortest and to have that column be shortest across all pages of the site.</p>
+		<p>Here the sidebar column contains less content than the main content column and so will be shorter.</p>
+		<p>Where the sidebar ends the background of the container shows through. Because we've set container and sidebar to have the same background it appears as though the sidebar continues.</p>
+		<p>It's important in this layout to set the background color of the longer column. Setting the background color of the shorter column isn't important, but I usually set it anyway.</p>
+	</div>
+	
+</div>
+
+</body>
+</html>

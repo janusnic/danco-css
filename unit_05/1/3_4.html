@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Equal Height Columns With Borders and Negative Margins</title>
+
+<meta charset="utf-8">
+<meta name="description" content="" />
+
+<link rel="stylesheet" href="style.css">
+
+<style type="text/css">
+/* --------- demo presentation------------ */
+body {font: normal 16px/1.5em helvetica, arial, sans-serif; margin:0; width:100%;}
+
+#content, #sidebar {padding: 10px 0;}
+#sidebar {color:#fff}
+#content p, #sidebar p {max-width: 75%}
+h2 {font-size: 14px}
+/* --------------------------------------- */
+
+
+#container {
+	width:960px;
+	margin: 0 auto;
+}
+
+
+/* ----------- arrange columns ------------- */
+#content {
+	float:left;
+	width:600px;
+	padding-left: 100px;
+	background:#eee;
+	border-left: 260px solid #555;
+}
+
+#sidebar {
+	float: left;
+	width:245px;
+	padding-left: 15px;
+	margin-right: -260px;
+	position: relative;
+}
+/* --------------------------------------- */
+</style>
+
+</head>
+
+<body>
+<div id="container">
+
+	<div id="sidebar">
+		<h2>Sidebar</h2>
+		<pre>
+#sidebar {
+  float: left;
+  width:260px;
+  margin-right: -260px;
+  position: relative;
+}
+		</pre>
+	</div>
+
+	<div id="content">
+		<h2>Main content</h2>
+		<pre>
+#content {
+  float:left;
+  width:700px;
+  background:#eee;
+  border-left: 260px solid #555;
+}
+		</pre>
+		
+		<p>This layout works by using a border on the content to show the background color behind the sidebar.</p>
+		<p>The border-width is equal to the width of the sidebar column. Because of this additional width the columns won't normally sit side by side.</p>
+		<p>We get them to both fit side by side in the container by giving the sidebar a negative right margin equal to its width.</p>
+		<p>The stacking context wants to place the sidebar content behind the border of the main content column, but we change the stacking context by adding position: relative to the sidebar, bringing it to the top of the stack.</p>
+	</div>
+	
+</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Equal Height Columns With Relatively Positioned Containers</title>
+
+<meta charset="utf-8">
+<meta name="description" content="" />
+
+<link rel="stylesheet" href="style.css">
+
+<style type="text/css">
+/* --------- demo presentation---------- */
+body {font: normal 16px/1.5em helvetica, arial, sans-serif; margin:0; width:100%; color: #000}
+#page-wrap { width: 80%; margin: 60px auto; }
+#page-wrap > div { margin: 0 0 50px 0; min-width: 500px; width: 100%; }
+
+#css-table { 
+			display: table; 
+		}
+		#css-table .col { 
+			display: table-cell; 
+			width: 25%; 
+			padding: 10px; 
+		}
+		#css-table .col:nth-child(even) { 
+			background: #ccc;
+		}
+		#css-table .col:nth-child(odd) { 
+			background: #eee;
+		}
+/* ------------------------------------- */
+
+</style>
+
+</head>
+
+<body>
+<div id="page-wrap">
+  <div id="css-table">
+			<div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+			<div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+			<div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p></div>
+			<div class="col"><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></div>
+		</div>
+</div>
+</body>
+</html>

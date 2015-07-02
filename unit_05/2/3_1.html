@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Two column layout with no wrapper div</title>
+<style type="text/css">
+/* step-1 :: background colors */
+html {background:#45473f;}
+body {width:80%;margin:20px auto;background:#ffe3a6;}
+#header {background:#9c9965;}
+#sidebar {float:left;width:200px;background:#d4c37b;}
+#main {border-left:200px solid #d4c37b;}
+#footer {clear:left;background:#9c9965;}
+/* step-2 :: block formatting contexts */
+#header,
+#footer {overflow:hidden;zoom:1;}
+#main {float:left;}
+#sidebar {margin-right:-200px;}
+/* step-3 :: stacking context */
+#sidebar {position:relative;}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h2><a href="#">Header</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus. Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros.</p>
+</div>
+<div id="sidebar">
+<h2><a href="#">Sidebar</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus.</p> 
+<p>Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros. Curabitur ullamcorper semper est, ut egestas est bibendum in.</p>
+</div>
+<div id="main">
+<h2><a href="#">Main</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus. Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros. Curabitur ullamcorper semper est, ut egestas est bibendum in. Nulla scelerisque diam eget sapien sollicitudin accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus pharetra mauris a mattis. Morbi gravida velit nec lectus semper vitae porta sapien semper. Sed blandit tempus tristique. Aenean libero enim, gravida eget egestas et, dapibus in odio. Aenean nisl nunc, ornare porttitor aliquam non, lacinia in leo. Cras viverra mi in justo ultrices ac mattis mi imperdiet. Proin at rhoncus libero. Mauris quis urna eros, dapibus porta lectus.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus. Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros.</p>
+<p>Nulla scelerisque diam eget sapien sollicitudin accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus pharetra mauris a mattis. Morbi gravida velit nec lectus semper vitae porta sapien semper. Sed blandit tempus tristique. Aenean libero enim, gravida eget egestas et, dapibus in odio. Aenean nisl nunc, ornare porttitor aliquam non, lacinia in leo. Cras viverra mi in justo ultrices ac mattis mi imperdiet. Proin at rhoncus libero. Mauris quis urna eros, dapibus porta lectus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus. Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros.</p>
+<p>Nulla scelerisque diam eget sapien sollicitudin accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus pharetra mauris a mattis. Morbi gravida velit nec lectus semper vitae porta sapien semper. Sed blandit tempus tristique. Aenean libero enim, gravida eget egestas et, dapibus in odio. Aenean nisl nunc, ornare porttitor aliquam non, lacinia in leo. Cras viverra mi in justo ultrices ac mattis mi imperdiet. Proin at rhoncus libero. Mauris quis urna eros, dapibus porta lectus.</p>
+</div>
+<div id="footer">
+<h2><a href="#">Footer</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis facilisis viverra. Curabitur luctus, nibh ac rhoncus ultrices, turpis mauris mattis dui, quis pharetra odio orci vitae risus. Nunc ultricies gravida facilisis. Pellentesque ante mauris, blandit id condimentum non, tristique non urna. Integer nec erat eros. Curabitur ullamcorper semper est, ut egestas est bibendum in.</p>
+</div>
+</body>
+</html>
