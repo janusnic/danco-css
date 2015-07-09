@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>position: absolute</title>
+
+<style type="text/css">
+  .demo { 
+    position:relative; 
+    margin:0 auto; 
+    height: 400px;
+    width:400px;
+    display: block;
+}
+
+  .demo img { 
+    left: 0; 
+    position:absolute; 
+    top: 0; 
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.demo img.raz {
+  -moz-transform:scale(1,0);
+  -webkit-transform:scale(1,0);
+  -o-transform:scale(1,0);
+  -ms-transform:scale(1,0);
+}
+ .demo:hover img.raz {
+  -moz-transform:scale(1);
+  -webkit-transform:scale(1);
+  -o-transform:scale(1);
+  -ms-transform:scale(1);
+}
+ .demo:hover img.dva {
+  -moz-transform:rotate(360deg) scale(0);
+  -webkit-transform:rotate(360deg) scale(0);
+  -o-transform:rotate(360deg) scale(0);
+  -ms-transform:rotate(360deg) scale(0);
+}
+
+    
+</style>
+</head>
+ <body>
+  <a class="demo" href="#">
+<img class="raz" src="images/sun1.png" />
+<img class="dva" src="images/sun2.png" />
+</a>
+<pre>
+.demo { 
+    position:relative; 
+    margin:0 auto; 
+    height: 400px;
+    width:400px;
+    display: block;
+}
+
+  .demo img { 
+    left: 0; 
+    position:absolute; 
+    top: 0; 
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.demo img.raz {
+  -moz-transform:scale(1,0);
+  -webkit-transform:scale(1,0);
+  -o-transform:scale(1,0);
+  -ms-transform:scale(1,0);
+}
+ .demo:hover img.raz {
+  -moz-transform:scale(1);
+  -webkit-transform:scale(1);
+  -o-transform:scale(1);
+  -ms-transform:scale(1);
+}
+ .demo:hover img.dva {
+  -moz-transform:rotate(360deg) scale(0);
+  -webkit-transform:rotate(360deg) scale(0);
+  -o-transform:rotate(360deg) scale(0);
+  -ms-transform:rotate(360deg) scale(0);
+}
+
+</pre>
+  </body>
+</html>
+
+
