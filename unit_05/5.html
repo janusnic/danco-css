@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html class=''>
+<head>
+<meta charset='UTF-8'>
+
+<style>
+* {
+    font-family: Arial, sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h1 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+#container {
+    margin: 0 auto;
+    width: 50%; 
+}
+
+#container input {
+    height: 2.5em;
+    visibility: hidden;
+}
+
+#container label {
+    background: #f9f9f9; 
+    border-radius: .25em .25em 0 0;
+    color: #888; 
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 1em;
+    height: 2.5em;
+    line-height: 2.5em;
+    margin-right: .25em;
+    padding: 0 1.5em;
+    text-align: center;
+}
+
+#container input:hover + label {
+    background: #ddd; 
+    color: #666;
+}
+
+#container input:checked + label {
+    background: #f1f1f1; 
+    color: #444; 
+    position: relative;
+    z-index: 6;
+
+}
+
+#content {
+    background: #f1f1f1; 
+    border-radius: 0 .25em .25em .25em;
+    min-height: 20em; 
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+#content div {
+    opacity: 0;
+    padding: 1.5em;
+    position: absolute;
+    z-index: -100;
+}
+
+#content-1 p {
+    clear: both;
+    margin-bottom: 1em;
+}
+#content-1 p.left img {
+    float: left;
+    margin-right: 1em;
+}
+#content-1 p.last {
+    margin-bottom: 0;
+}
+
+#content-2 p {
+    float: left;
+    width: 48.5%;
+}
+#content-2 p.column-right {
+    margin-left: 3%;
+}
+#content-2 p img {
+    display: block;
+    margin: 0 auto 1em auto;
+}
+#content-3 p,
+#content-3 ul {
+    margin-bottom: 1em;
+}
+#content-3 ul {
+    margin-left: 2em;
+}
+
+#container input#tab-1:checked ~ #content #content-1,
+#container input#tab-2:checked ~ #content #content-2,
+#container input#tab-3:checked ~ #content #content-3 {
+    opacity: 1;
+    z-index: 100;
+}
+
+input.visible {
+  visibility: visible !important;
+}</style></head><body>
+<body>
+
+    <h1>Tabs with CSS3 & HTML5 only</h1>
+
+    <div id="container">
+
+        <input id="tab-1" type="radio" name="tab-group" checked="checked" />
+        <label for="tab-1">Tab 1</label>
+
+        <input id="tab-2" type="radio" name="tab-group" />
+        <label for="tab-2">Tab 2</label>
+
+        <input id="tab-3" type="radio" name="tab-group" />
+        <label for="tab-3">Tab 3</label>
+
+        <div id="content">
+
+            <div id="content-1">
+                <p class="left"><img src="http://ximg.es/160x120" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum sit reprehenderit iusto harum minima. Assumenda, accusamus, perspiciatis inventore tempora qui pariatur quisquam? Deleniti, placeat ea nostrum officiis obcaecati temporibus quod. Ullam, in, adipisci autem at fugit ab tempore enim ratione nesciunt alias corporis vitae quo quod nostrum itaque vero iure?</p>
+                <p class="left last"><img src="http://ximg.es/160x120" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, id blanditiis deserunt in molestiae excepturi incidunt molestias dolor sunt dolore obcaecati non repellat mollitia error placeat est exercitationem sit voluptates iure autem saepe voluptas harum unde perferendis modi provident labore voluptatum. Repudiandae, aspernatur sit harum quod vero quos sequi voluptas!</p>
+            </div>
+
+            <div id="content-2">
+                <p class="column-left"><img src="http://ximg.es/200x150" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, est, nisi enim voluptates dicta quibusdam recusandae eveniet provident non at nostrum nesciunt laudantium omnis aliquam debitis magni expedita cumque tempore.</p>
+                <p class="column-right"><img src="http://ximg.es/200x150" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, molestiae, officia repellendus quasi cumque dolor eius deserunt possimus aliquid neque nam assumenda veniam soluta enim commodi aperiam reprehenderit quia incidunt.</p>
+            </div>
+
+            <div id="content-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, aperiam, enim odit placeat minus ab vero molestiae ad fugit maiores eaque saepe debitis assumenda ut ipsam eius sit repellendus dolore.</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, in magni illo dolore dicta vero.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, minus, aspernatur voluptatem doloribus labore modi.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem quia id accusamus beatae sunt? Dolorum mollitia sint debitis delectus.</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, accusantium, provident ab quo sed blanditiis perspiciatis distinctio aut voluptatibus cum odio quaerat iure vel dolorum fugit explicabo suscipit tenetur. Sed!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</body></html>
